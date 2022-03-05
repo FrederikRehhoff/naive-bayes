@@ -29,7 +29,7 @@ def main():
     target_values = [row[-1] for row in dataset]
     clf = NaiveBayes(extract_features)
     clf.fit(design_matrix, target_values)
-    prediction = clf.predict_record([1, 1, 50700])
+    prediction = clf.predict_record([0, 1, 1000])
     negation_word = " not " if prediction == 0.0 else ""
     print("We predict this person will" + negation_word + "default on their loans.")
 
